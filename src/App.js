@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import MainMenu from './Components/MainMenu';
+import Quiz from './Components/Quiz';
+import EndScreen from './Components/EndScreen';
+
+import { QuizConcept } from './Helpers/Context';
 
 function App() {
+  const [gameState, setGameState] = useState('menu'); // Using single quotes for consistency
+  const [score, setScore] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Quiz App</h1>
+      <QuizConcept.Provider value={{ gameState, setGameState, score, setScore }}>
+        {gameState === 'menu' && <MainMenu />}
+        {gameState === 'quiz' && <Quiz />}
+        {gameState === 'endscreen' && <EndScreen />}
+      </QuizConcept.Provider>
     </div>
   );
 }

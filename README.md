@@ -8,7 +8,7 @@ Welcome to the React Interview Quiz App! This project is designed to help you pr
 - Immediate feedback on your selected answers.
 - Progress tracking and scoring.
 
-
+For further enquiries/collaborations, you can reach me via email: samueloloruntoyin@gmail.com
 
 In the project directory, you can run:
 

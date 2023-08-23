@@ -1,4 +1,4 @@
-# React Interview Quiz App
+# Build a React Interview Quiz App using ReactJs
 
 Welcome to the React Interview Quiz App! This project is designed to help you prepare for React-related interviews by testing your knowledge of React concepts and practices.
 
